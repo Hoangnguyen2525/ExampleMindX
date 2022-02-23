@@ -32,4 +32,18 @@ function allLongestStrings(inputArray) {
             sumsArr.push(sumTeam1);
             sumsArr.push(sumTeam2);
             return sumsArr
+            var mindX2 =  alternatingSums([60, 40, 55, 75, 64])
+            console.log(mindx2) 
           }
+          const button = document.querySelector('.btn-random');
+          button.addEventListener('click',changeColor);
+           function changeColor(){
+            const background = document.querySelector('.background');
+            const arrayColor = ['red','yellow','pink','gray','black','orange','blue'];
+            let random = arrayColor[randomColor(arrayColor)];
+            background.style.backgroundColor = random;
+        }
+        function randomColor(array){
+            return Math.floor(Math.random()*array.length);
+        }
+    
