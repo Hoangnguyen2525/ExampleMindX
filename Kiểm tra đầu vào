@@ -15,9 +15,9 @@
 <div class="pic"></div>
 <h3 style="text-align:center">enter a color</h3>
 <div style="text-align:center">
-    <input type="text" id="enter color" placeholder="color" style="z-index:0"/>
+    <input type="text" id="enter color" placeholder="color" style="z-index:0" onkeydown="submitonenter(event)" onfocus="clearwronginput()"/>
 <button class="button" type="buton" style="z-index:0" onclick="clickcolor(0,-1,-1)">ENTER</button>
-<div class="color"><button class="random">Ngẫu Nhiên</button> </div>
+<div class="color"><button class="btn btn-danger">Ngẫu Nhiên</button> </div>
 </div>
 <div id="wronginput" style="display:none">Wrong input</div>
 <div class="bgcolor" style="text-align: center"><h3>Selected color</h3>
