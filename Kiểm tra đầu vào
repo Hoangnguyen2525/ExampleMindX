@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+<header>
+    <nav class="navbar">Kiểm tra đầu vào </nav>
+</header>
+<div class="color-section"><h1>COLOR PICKER</h1></div>
+<h3 class="pick color" style="text-align:center"></h3>
+<div class="pic"></div>
+<h3 style="text-align:center">enter a color</h3>
+<div style="text-align:center">
+    <input type="text" id="enter color" placeholder="color" style="z-index:0"/>
+<button class="button" type="buton" style="z-index:0" onclick="clickcolor(0,-1,-1)">ENTER</button>
+<div class="color"><button class="random">Ngẫu Nhiên</button> </div>
+</div>
+<div id="wronginput" style="display:none">Wrong input</div>
+<div class="bgcolor" style="text-align: center"><h3>Selected color</h3>
+<div id="selectedcolor" class="large" style="background-color:rgb(0 ,204 ,255)">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</div>
+    </body>
+</html>
