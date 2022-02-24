@@ -1,13 +1,31 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="index.js"></script>
-    </head>
-    <body>
-<header>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+	<link href=
+"https://fonts.googleapis.com/css2?family=Itim&display=swap"
+		rel="stylesheet">
+</head>
+<style> 
+div.a {
+  height: auto;
+  border: 1px solid black;
+}
+
+div.b {
+  height: 200px;
+  border: 1px solid black;
+}
+</style>
+
+<body>
+	<header>
     <nav class="navbar">Kiểm tra đầu vào </nav>
 </header>
 <div class="color-section"><h1>COLOR PICKER</h1></div>
@@ -15,23 +33,32 @@
 <div class="pic"></div>
 <h3 style="text-align:center">enter a color</h3>
 <div style="text-align:center">
-    <input type="text" id="enter color" placeholder="color" style="z-index:0" onkeydown="submitonenter(event)" onfocus="clearwronginput()"/>
-<button class="button" type="buton" style="z-index:0" onclick="clickcolor(0,-1,-1)">ENTER</button>
-<div class="color"><button class="btn btn-danger">Ngẫu Nhiên</button> </div>
+    <input type="text" id="colorHex" style="z-index:0" onkeydown="submitonenter(event)" onfocus="clearwronginput()"/>
+<button id="btnCoppy" class="button" type="buton" style="z-index:0">Coppy</button>
+<div id="btnRandom" class="color"><button class="btn btn-danger">Ngẫu Nhiên</button> </div>
 </div>
 <div id="wronginput" style="display:none">Wrong input</div>
 <div class="bgcolor" style="text-align: center"><h3>Selected color</h3>
-<div id="selectedcolor" class="large" style="background-color:rgb(0 ,204 ,255)">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div id="selectedcolor" class="b" style="background-color:rgb(0 ,204 ,255)">
 </div>
 </div>
-    </body>
+</body>
+
+<script>
+function setRandomBG() {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.getElementById("selectedcolor").style.backgroundColor = "#" +   randomColor;
+  document.getElementById("colorHex").value = "#" + randomColor;
+}
+
+function coppyColor() {
+  var color = document.getElementById("colorHex").value
+  document.getElementById("colorHex").execCommand("copy");
+  alert("Copied the color" + color);
+}
+
+document.getElementById("btnRandom").addEventListener("click", setRandomBG);
+document.getElementById("btnCoppy").addEventListener("click", coppyColor);
+</script>
+
 </html>
