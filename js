@@ -32,6 +32,6 @@ function allLongestStrings(inputArray) {
             sumsArr.push(sumTeam1);
             sumsArr.push(sumTeam2);
             return sumsArr
-            var mindX2 =  alternatingSums([60, 40, 55, 75, 64])
-            console.log(mindx2) 
           }
+            var mindX2 =  alternatingSums([60, 40, 55, 75, 64])
+            console.log(mindx2)
