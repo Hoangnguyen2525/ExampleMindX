@@ -60,6 +60,6 @@ function coppyColor() {
 document.getElementById("btnRandom").addEventListener("click", setRandomBG);
 document.getElementById("btnCoppy").addEventListener("click", coppyColor);
 </script>
-
+<script src="index.js"></script>
 </html>
 https://www.youtube.com/playlist?list=PLafZUo_-Gd-tNPPdbwF5u02ZNu4oWkCiL
