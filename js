@@ -34,4 +34,4 @@ function allLongestStrings(inputArray) {
             return sumsArr
           }
             var mindX2 =  alternatingSums([60, 40, 55, 75, 64])
-            console.log(mindx2)
+            console.log(mindx2)}
